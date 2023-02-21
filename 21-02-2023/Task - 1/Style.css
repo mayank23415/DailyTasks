@@ -1,0 +1,16 @@
+.header{
+    padding: 80px;
+    text-align: center;
+    background-image: url('https://source.unsplash.com/random/1920x1080/?wallpaper,black');
+    color: white;
+}
+.header h1{
+    font-size: 50px;
+}
+.list{
+    padding: 100px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: black;
+    font-size: 20px;
+}

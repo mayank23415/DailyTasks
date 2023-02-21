@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+    <!-- 
+        In this task we have design a static web page
+        showing the use of 'a' tag with all possible 
+        attributes.
+    -->
+    <div class="header">
+        <h1>This is a static web page</h1>
+        <p>This is site is created to implement 'a' tag</p>
+    </div>
+
+    <!--
+        All possible ways to use 'a' tag
+    -->
+
+    <div class="list">
+        <ol>
+            <!-- Basic structure of 'a' tag using href 
+                attribute-->
+            <li>
+                <a href="https://developer.mozilla.org/en-US/docs/web/css/tutorials">CSS Tutorial Link</a>
+            </li>
+            <!-- Using target attributes of 'a' tag-->
+            <li>Target Attribute of "a" tag
+
+                <ul>
+                    <li>
+                        <a href="https://source.unsplash.com/random/1920x1080/?wallpaper,dog" target="_blank">Doggo</a>
+                    </li>
+                    <li>
+                        <a href="https://source.unsplash.com/random/1920x1080/?wallpaper,cat" target="_parent">Cat</a>
+                    </li>
+                    <li>
+                        <a href="https://source.unsplash.com/random/1920x1080/?wallpaper,turtle"
+                            target="_self">Turtle</a>
+                    </li>
+                    <li>
+                        <a href="https://source.unsplash.com/random/1920x1080/?wallpaper,otter" target="_top">Otter</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- hreflang attribute of 'a' tag-->
+            <li>
+                <a href="https://thedailyblog.co.nz/" hreflang="en">Daily Blog</a>
+            </li>
+            <!-- rel attribute is used in the code below
+                 the main purpose of rel attribute is to 
+                 define the relation btw the current page 
+                 linked page-->
+            <li>
+                <a href="https://source.unsplash.com/random/1920x1080/?wallpaper,otter" rel="next">this is good otter</a>
+            </li>
+        </ol>
+    </div>
+</body>
+
+</html>
