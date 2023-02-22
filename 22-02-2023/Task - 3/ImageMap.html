@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Image Mapping !</h1>
+    <p>In this example we will demonstrate image mapping, where each object present in the image is attached with a hyperlink </p>
+    <div>
+        <map name="map_example">
+            <area href="https://www.apple.com/in/macbook-air/" target="_blank" shape="poly" coords="12,14,10,235,202,165,220,98,224,40,290,36,278,10">
+
+            <area href="https://www.apple.com/in/iphone-se/" target="_blank" shape="rect" coords="229,44,304,176">
+
+            <area href="https://www.apple.com/in/shop/product/MK2E3ZM/A/magic-mouse-white-multi-touch-surface" target="_blank" shape= "rect" coords="351,47,426,146">
+
+            <area href="../OIP.jpg" target="_blank" shape="rect" coords="439,18,587,151">
+            
+            <area href="../diary.jpg" target="_blank" shape="rect" coords="606,17,788,224">
+            <area href="../specs.jpg" target="_blank" shape="rect" coords="106,203,285,246">
+        </map>
+        <img src="../MicrosoftTeams-image.png" alt="image map example" width="800" height="489" usemap="#map_example">
+    </div>
+</body>
+</html>
