@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <h1>Image Mapping !</h1>
-    <p>In this example we will demonstrate image mapping, where each object present in the image is attached with a hyperlink </p>
+    <div class="introduction">
+        <h1>Image Mapping !</h1>
+        <p style="font-size: 15px;">In image mapping an image is specified with certain set of coordinates inside the
+            image
+            which act as hyperlink areas to different destinations. It is different from an image link since in linking,
+            an
+            image can be used to serve a single link or destination whereas in a mapped image, different coordinates of
+            the
+            image can serve different links or destinations.</p>
+    </div>
+
+    <div class="about">
+        <h2>Elements required in Mapping an Image :</h2>
+        <p style="font-size: 15px;">There are three basic html elements which are required for creating a mapped image.
+        </p>
+        <ol>
+            <li><b>Map :</b> It is used to create map of the image with clickable areas.</li>
+            <li><b>Image :</b> It is used for the image source on which mapping is done.</li>
+            <li><b>Area :</b> It is used within the map for defining clickable areas.</li>
+        </ol>
+    </div>
+
     <div>
         <map name="map_example">
-            <area href="https://www.apple.com/in/macbook-air/" target="_blank" shape="poly" coords="12,14,10,235,202,165,220,98,224,40,290,36,278,10">
+            <area href="Laptop.html" target="_blank" shape="poly"
+                coords="12,14,10,235,202,165,220,98,224,40,290,36,278,10">
 
-            <area href="https://www.apple.com/in/iphone-se/" target="_blank" shape="rect" coords="229,44,304,176">
+            <area href="Phone.html" target="_blank" shape="rect" coords="229,44,304,176">
 
-            <area href="https://www.apple.com/in/shop/product/MK2E3ZM/A/magic-mouse-white-multi-touch-surface" target="_blank" shape= "rect" coords="351,47,426,146">
+            <area href="Mouse.html" target="_blank" shape="rect" coords="351,47,426,146">
 
-            <area href="../OIP.jpg" target="_blank" shape="rect" coords="439,18,587,151">
-            
-            <area href="../diary.jpg" target="_blank" shape="rect" coords="606,17,788,224">
-            <area href="../specs.jpg" target="_blank" shape="rect" coords="106,203,285,246">
+            <area href="Coffee.html" target="_blank" shape="rect" coords="439,18,587,151">
+
+            <area href="Diary.html" target="_blank" shape="rect" coords="606,17,788,224">
+            <area href="Glasses.html" target="_blank" shape="rect" coords="106,203,285,246">
+            <area href="Laptop.html" shape="poly" coords="311,118,311,65,335,113" target="_blank">
         </map>
         <img src="../MicrosoftTeams-image.png" alt="image map example" width="800" height="489" usemap="#map_example">
     </div>
 </body>
+
 </html>
