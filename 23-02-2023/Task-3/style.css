@@ -1,0 +1,27 @@
+.header1{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;    
+    font-weight: bold;
+    background: lightgray;
+}
+
+
+.header2{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: auto auto auto auto;
+}
+
+
+
+.cell{
+    border: 1px solid black;
+    padding: 5px;
+}
+.spancell{
+    grid-row: 1 / span 3;
+    border: 1px solid black;
+    padding: 5px;
+    background: lightgray;
+}

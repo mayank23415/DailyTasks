@@ -1,0 +1,32 @@
+.header1{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    font-weight: bold;
+    background: lightgray;
+}
+
+
+.header2{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+
+
+.cell{
+    border: 1px solid black;
+    padding: 5px;
+}
+.spancell{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 1px solid black;
+    padding: 5px;
+    background: lightgray;
+}
+.tax{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border: 1px solid black;
+    padding: 5px;
+}
