@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration From</title>
+    <style>
+        h1 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        fieldset {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function fetchdata(){
+            const name = document.getElementById("name").value;
+            const age = document.getElementById("age").value;
+            var gender = document.getElementById("gender");
+            const address = document.getElementById("address").value;
+            const contact = document.getElementById("contact").value;
+            const subjects = document.getElementById("subjects").value;
+            document.writeln("Name - " + name + "<br>");
+            document.writeln("Age - " + age + "<br>");
+            for(i=0; i<gender.length; i++) {
+                if(gender[i].checked == true)
+                    document.writeln("Gender - " + gender[i]+ "<br>");
+            }
+            document.writeln("Address - " + address+ "<br>");
+            if(contact.length == 10) {
+                document.writeln("Contact - " + contact+ "<br>");
+            }else {
+                alert("Enter valid number");
+                window.location.reload();
+            }
+            document.writeln("Subjects - " + subjects+ "<br>");
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Student Enrollment Form</h1>
+    <form onsubmit="fetchdata( )">
+        <fieldset>
+            <legend>Enter Details</legend>
+    
+            <label for="name">Enter Name</label><br>
+            <input type="text" id="name" placeholder="Enter Name"><br>
+    
+            <label for="age">Enter Age</label><br>
+            <input type="number" id="age"><br>
+    
+            <label for="gender">Male</label>
+            <input type="radio" name="gender" id="gender" value="Male">
+    
+            <label for="gender">Female</label>
+            <input type="radio" name="gender" id="gender" value="Female"><br>
+    
+            <label for="address">Address</label><br>
+            <input type="text" id="address"><br>
+    
+            <label for="contact">Contact Details</label><br>
+            <input type="number" id="contact"><br>
+    
+            <label for="subjects">Subjects</label><br>
+            <input type="text" id="subjects"><br>
+    
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    
+</body>
+
+</html>

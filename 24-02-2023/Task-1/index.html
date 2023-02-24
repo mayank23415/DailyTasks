@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This page is built to demonstrate input tag">
+    <title>Input</title>
+    <script type="text/JavaScript">
+        function form() {
+            document.write(
+                document.getElementById("FirstName").value + "\n"
+                 + document.getElementById("LastName").value + "\n"
+                 + document.getElementById("Email").value + "\n"
+                 + document.getElementById("Age").value + "\n"
+                 + document.getElementById("Gender").value 
+            );
+        } 
+    </script>
+</head>
+
+<body>
+    <h1>Input Tag</h1>
+    <form onsubmit="form()">
+        <label for="FirstName">First Name </label><br>
+        <input type="text" id="FirstName"><br>
+
+        <label>Last Name </label><br>
+        <input type="text" id="LastName"><br>
+
+        <label for="Email">Email </label><br>
+        <input type="email" id="Email"><br>
+
+        <label for="Age">Age </label><br>
+        <input type="number" id="Age"><br>
+        <input type="radio" name="Gender" id="Gender" value="Male">
+        <label for="Male">Male</label>
+        <input type="radio"  name="Gender" id="Gender" value="Female">
+        <label for="Female">Female</label><br>
+        <input type="submit" id="Submit">
+        
+    </form>
+    <p id="inputData"></p>
+    
+</body>
+
+</html>

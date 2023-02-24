@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Tags</title>
+    <meta name="description" content="This document contains the demonstration of Label, Fieldset, Legend, Opt-Group">
+
+    <style>
+        h1,h3,p, fieldset{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <h1>HTML Tags</h1>
+    <h3>Label :</h3>
+    <p>The label tag in HTML is used to provide a usability improvement for mouse users i.e, if a user clicks on the text within the label element, it toggles the control. The label tag defines the label for button, input, meter, output, progress, select, or textarea element.</p>
+    <h3>Fieldset :</h3>
+    <p>The fieldset tag is used to group related elements in a form.The fieldset tag draws a box around the related elements.
+    </p>
+    <h3>Legend :</h3>
+    <p>The Legen tag is used to define the caption for the field tag element.Hence, the fieldset element provides a container for related form controls and the legen element act as a heading to identify the group.</p>
+
+    <h3>Opt-group :</h3>
+    <p>Opt-group is used to group the options for the drop-down list created by using select tag.</p>
+    <fieldset>
+        <legend>Details</legend>
+        <label for="FirstName">First Name </label><br>
+        <input type="text" id="FirstName"><br>
+
+        <label>Last Name </label><br>
+        <input type="text" id="LastName"><br>
+
+        <label for="Email">Email </label><br>
+        <input type="email" id="Email"><br>
+
+        <label for="Age">Age </label><br>
+        <input type="number" id="Age"><br>
+
+        <label for="DOB">Date of Birth </label><br>
+        <input type="date" id="DOB"><br>
+
+        <label>Select your country :</label><br>
+        <select>
+            <optgroup label="Countries">
+                <option value="India">India</option>
+                <option value="Australia">Australia</option>
+                <option value="Canada">Canada</option>
+                <option value="England">England</option>
+                <option value="Iceland">Iceland</option>
+                <option value="USA">USA</option>
+            </optgroup>
+        </select><br>
+
+        <input type="submit" id="submit">
+    </fieldset>
+</body>
+
+</html>
