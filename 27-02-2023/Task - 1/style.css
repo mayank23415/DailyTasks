@@ -1,0 +1,12 @@
+*{
+    color: maroon;
+}
+#IDSelector{
+    color: blueviolet;
+}
+article{
+    color: violet;
+}
+.ClassSelector{
+    color: grey;
+}

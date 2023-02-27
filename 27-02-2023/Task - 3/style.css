@@ -1,0 +1,8 @@
+h1, h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(60, 82, 103);
+}
+p{
+    font-size: larger;
+    color: rgb(47, 80, 80);
+}
