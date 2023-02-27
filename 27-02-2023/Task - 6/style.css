@@ -1,0 +1,17 @@
+* {
+  background: rgb(27, 27, 123);
+}
+
+.box {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 5px solid white;
+  padding: 30px;
+}
+.box h1 {
+  color: white;
+}
+.box p {
+  color: aliceblue;
+}
+
+/*# sourceMappingURL=style.css.map */

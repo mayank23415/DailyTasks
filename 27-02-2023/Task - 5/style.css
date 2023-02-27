@@ -1,0 +1,16 @@
+* {
+  background-color: aliceblue;
+}
+.Boxed {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border: 5px solid blueviolet;
+  border-radius: 20px;
+  padding: 20px;
+}
+.Boxed h1,
+.Boxed h2 {
+  color: navy;
+}
+.Boxed p {
+  color: navy;
+}
