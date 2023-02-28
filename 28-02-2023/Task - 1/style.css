@@ -1,0 +1,80 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: #B1AAB0;
+}
+
+/* Styling for the page */
+.introduction{
+    padding: 20px;
+    margin:10px;
+}
+
+.details {
+    margin: 10px;
+    padding: 20px;
+}
+
+.heading{
+    color: purple;
+}
+
+.paragraph{
+    color: #5C415D;
+}
+
+/* These are the pseudo classes used for Anchor tag */
+a:link{
+    color: #E15634;
+}
+
+a:visited{
+    color: rgb(100, 158, 146);
+}
+
+a:hover{
+    color: turquoise;
+}
+
+a:active {
+    color: #D91E36;
+}
+
+/* First Child pseudo class */
+h1:first-child {
+    color: purple;
+}
+/* Hover pseudo class on div */
+.divHover{
+    color: #5C415D;
+}
+
+.divHover:hover{
+    color: lightpink;
+}
+
+/* Example for first line pseudo element */
+.example1::first-line{
+    color: white;
+}
+
+
+/* Example for first letter pseudo element */
+.example2::first-letter{
+    font-size: xx-large;
+    color: white;
+}
+
+
+/* This is the example of marker Pseudo-element */
+.example3{
+    color: #5C415D;
+}
+::marker{
+    color: #D91E36;
+}
+
+
+/* Example for selection pseudo element */
+::selection{
+    background: lightgrey;
+}

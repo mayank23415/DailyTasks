@@ -1,0 +1,50 @@
+*{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.nav-bar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(19, 22, 20);
+}
+
+.nav-bar a {
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.current1 {
+    background: grey;
+    color: black;
+}
+.current2 {
+    background: grey;
+    color: black;
+}
+.current3 {
+    background: grey;
+    color: black;
+}
+.nav-bar a:visited{
+    color: white;
+}
+.nav-bar a:hover{
+    background-color: grey;
+}
+.heading{
+    color: black;
+    font-size: x-large;
+}
+.paragraph{
+    color: rgb(63, 63, 63);
+    font-size: larger;
+}
+.button{
+    border: none;
+    background-color: grey;
+    color: #ddd;
+    height: 20px;
+    width: 137px;
+    margin-top: 5px;
+}
+

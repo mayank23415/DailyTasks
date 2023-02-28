@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Elements</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="introduction">
+        <h1 class="heading">Pseudo Elements</h1>
+        <h2 class="heading">What are Pseudo-elements?</h2>
+        <p class="paragraph">CSS Pseudo-elements are defined as a special selector that adds special styles to an element without changing any existing document. These Pseudo-elements does not appear in the DOM but visible on the respective websites and it styles particular parts of HTML elements. These are just like a virtual element which are treated as a casual HTML element such that they are created using CSS.</p>
+
+        <h2 class="heading">The first-line Pseudo-element :</h2>
+        <p class="paragraph">The first-line pseudo-element is used to add a special style to the first line of a text.There are various properties that can be used to style the elements first line using this pseudo element. Some of them are - font, color, background, word-spacing, letter-spacing, text-decoration, etc.
+
+            The following example formats the first line of the text in all p elements:
+            <p class="example1">This is an example of first line pseudo element usage. We used this pseudo element on the current line to change the color of the line.</p> 
+        </p>
+
+        <h2 class="heading">The first-letter Pseudo-element :</h2>
+        <p class="paragraph">The first-letter pseudo-element is used to add a special style to the first letter of a text.The first-letter pseudo-element can only be applied to block-level elements. It have properties similar to first line but there are some different properties like - margin, padding, border,vertical align, float.
+
+            The following example formats the first letter of the text in all p elements: 
+            <p class="example2">This is an example of first letter pseudo element. We have increased the size of the first letter of this element using this pseudo element.</p>
+        </p>
+
+        <h2 class="heading">Multiple Pseudo-elements :</h2>
+        <p class="paragraph">In the following example, the first letter of a paragraph will be red, in an xx-large font size. The rest of the first line will be blue, and in small-caps. The rest of the paragraph will be the default font size and color:
+            <p class="example1 example2">This is the example of using multiple pseudo elements on a single element.</p>
+        </p>
+        <h2 class="heading">The marker Pseudo-element :</h2>
+        <p class="paragraph">The marker pseudo-element selects the markers of list items. We can change the color and size of the markers of list using this pseudo element. For example - </p>
+        <ul class="example3">
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Water</li>
+            <li>Softdrink</li>
+        </ul>
+
+        <h2 class="heading">The selection Pseudo-element :</h2>
+        <p class="paragraph">The selection pseudo-element matches the portion of an element that is selected by a user.
+
+            The following CSS properties can be applied to selection: color, background, cursor, and outline. Try to select something and its background color for this page is changed from blue to light gray</p>
+    </div>
+</body>
+</html>

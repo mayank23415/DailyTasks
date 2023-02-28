@@ -1,0 +1,64 @@
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: grey;
+}
+
+.flex-container {
+    width: auto;
+    position: relative;
+    display: flex;
+    background: grey;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-container .card {    
+    width: 340px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    margin: 5px;
+    background:white;
+}
+
+.flex-container .card .img {
+    position: relative;
+}
+
+.flex-container .card .img:hover {
+    background: lightgray;
+}
+
+.flex-container .card .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    color: rgb(27, 84, 52);
+}
+
+.button{
+    color: black;
+    border-radius: 5px;
+    height: 25px;
+    width: 200px;
+    background: rgb(152, 152, 152);
+    border: transparent;
+}
+.button:hover{
+    background: white;
+}
+.heading{
+    color:rgb(59, 17, 97);
+}
