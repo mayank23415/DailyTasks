@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Various ways to display</title>
+    <script type="text/javascript" src="script.js"></script>
+    <style>
+        body{
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Display data using JS</h1>
+    <p>Javascript can "display" data in different ways:</p>
+    <ul>
+        <li>
+            Writing into an HTML element, using innerHTML
+            Inner HTML sets or returns the HTML content of an element.
+            <br><button type="button1" onclick="innerHtmlMethod()">First method of printing</button>
+
+            <p id="para1"></p>
+        </li>
+        <li>
+            Writing into the HTML output using document.write(). Document.write method writes directly to an open(HTML) document stream. It is useful for testing.
+            
+            <br><button type="button2" onclick="writeMethod()">Second method of printing</button><br>
+        </li>
+        <li>
+            Writing into an alert box, using window.alert().The alert() method displays an alert box with a message and an OK button.
+            <br><button type="button3" onclick="alertMethod()">Third method of printing.</button><br>
+        </li>
+        <li>
+            Writing into the browser console, using console.log().The log() method writes (logs) a message to the console. It is useful for debuggin purposes.
+            <br><button type="button3" onclick="logMethod()">Fourth method of printing.</button>
+        </li>
+    </ul>
+</body>
+</html>
