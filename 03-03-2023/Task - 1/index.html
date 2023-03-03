@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Handling</title>
+    <script src="script.js" type="text/javascript"></script>
+    <style>
+        body{
+            margin: 40px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Throw, Try, Catch and Finally</h1>
+    <h2>What is exception?</h2>
+    <p>An exception is an “unwanted or unexpected event”, which occurs during the execution of the program i.e, at run-time, that disrupts the normal flow of the program’s instructions. When an exception occurs, the execution of the program gets terminated. </p>
+    <h2>How to handle exception?</h2>
+    <p>To handle exceptions we use try, catch and finally blocks - </p>
+    <ul>
+        <li>
+            <h3>try :</h3>
+            The try block contains a set of statements where an exception can occur.
+        </li>
+        <li>
+            <h3>catch :</h3>
+            The catch block is used to handle the uncertain condition of a try block. A try block is always followed by a catch block, which handles the exception that occurs in the associated try block.
+        </li>
+        <li>
+            <h3>finally :</h3>
+            It is executed after the catch block. We use it to put some common code (to be executed irrespective of whether an exception has occurred or not ) when there are multiple catch blocks. 
+        </li>
+        <li>
+            <h3>throw :</h3>
+            The throw statement allows you to create a custom error. Technically you can throw an exception (throw an error). The exception can be a JavaScript String, a Number, a Boolean or an Object 
+        </li>
+    </ul>
+    <h2>Example of error handling -</h2>
+    <label for="monthNumber">Month Number :</label>
+    <input type="number" id="monthNumber">
+    <button type="button" onclick="getMonthName()">Month</button>
+    <h1 id="printMonthName"></h1>
+</body>
+</html>
