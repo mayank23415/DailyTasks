@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shapes Area</title>
+    <script src="area.js" type="text/javascript"></script>
+    <style>
+        body{
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Area of Shapes</h1>
+    <h2>Area of square</h2>
+    <p>To find the area of the square enter the length one side :</p>
+    <input type="number" id="squareSide" placeholder="side length">
+    <button type="button" onclick="findArea.squareArea()">Square Area</button>
+    <h3 id="squareArea">Area of square is :</h3>
+    
+
+    <h2>Area of rectangle</h2>
+    <p>To find the area of the rectangle  enter the length and breadth :</p>
+    <input type="number" id="rectLength" placeholder="length">
+    <input type="number" id="rectBreadth" placeholder="breadth">
+    <button type="button" onclick="findArea.rectangleArea()">Rectangle Area</button>
+    <h3 id="rectArea">Area of rectangle is :</h3>
+
+    <h2>Area of triangle</h2>
+    <p>To find the area of the square please enter the length and breadth of the square :</p>
+    <input type="number" id="triHeight" placeholder="height">
+    <input type="number" id="triBase" placeholder="breadth">
+    <button type="button" onclick="findArea.triangleArea()">Triangle Area</button>
+    <h3 id="triArea">Area of triangle is :</h3>
+</body>
+</html>
