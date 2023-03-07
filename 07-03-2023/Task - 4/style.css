@@ -1,0 +1,14 @@
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 30px;
+}
+
+select{
+    height: 30px;
+    background-color: aliceblue;
+}
+
+body{
+    text-align: center;
+}
