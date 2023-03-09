@@ -12,10 +12,20 @@
     <h1>Select Routes</h1>
     <div class="container">
         <select class="source" id="selectSource" onchange="sourceSelection()">
-            
+            <option selected disabled>Select Source</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Uttarakhand">Uttarakhand</option>
         </select> 
-        <select class="destination" id="selectDestination" onchange="destinationSelection()">
-            
+        <select class="destination" id="selectDestination">
+            <option selected disabled>Select Destination</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Lucknow">Lucknow</option>
+            <option value="Punjab">Punjab</option>
+            <option value="Uttarakhand">Uttarakhand</option>
         </select>
     </div>
     <button type="button" onclick="main()">Submit</button>
