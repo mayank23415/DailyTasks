@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Registration Form</legend>
+            <label for="firstName">Firstname :</label>
+            <input type="text" id="firstName"><br>
+
+            <label for="lastName">Lastname :</label>
+            <input type="text" id="lastName"><br>
+
+            <label for="course">Course :</label>
+            <select id="course" onchange="getCourse()">
+                    <option selected disabled>Course</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Mechanical">Mechanical</option>
+                    <option value="Information Technology">IT</option>
+                    <option value="Civil">Civil</option>
+            </select><br>
+            <label for="Gender">Gender : </label>
+            <input type="radio" id="Male" value="Male" name="Gender" class="gender">
+            <label for="Male">Male</label>
+            <input type="radio" id="Female" value="Female" name="Gender" class="gender">
+            <label for="Female">Female</label>
+            <input type="radio" id="Other" value="Other" name="Gender" class="gender">
+            <label for="Other">Other</label><br>
+
+            <label for="phoneNumber">Phone :</label>
+            <input type="number" id="phoneNumber">
+            <button type="button" id="info1" onclick="phoneRules()" >i</button><br>
+            
+            <label for="email">Email :</label>
+            <input type="text" id="email"><br>
+            <label for="password">Password :<sub></sub></label>
+            <input type="password" id="password" >
+            <button type="button" id="info2" onclick="passwordRules()" >i</button><br>
+            <label for="rePassword">Re-type Password :</label>
+            <input type="password" id="rePassword" ><br>
+
+            <button type="button" onclick="register()" >Submit</button>
+        </fieldset>
+    </form>
+    <p id="showInfo"></p>
+</body>
+</html>

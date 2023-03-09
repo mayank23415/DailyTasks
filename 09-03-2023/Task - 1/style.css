@@ -1,0 +1,49 @@
+body{
+    margin: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px;
+    
+}
+
+#firstName {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#lastName {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#course {
+    margin-bottom: 10px;
+}
+.gender {
+    margin-bottom: 10px;
+}
+#phoneNumber {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#email {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#password {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+#rePassword {
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+#info1{
+    border-radius: 100px;
+    background-color: rgb(164, 78, 78);
+    color: white;
+}
+#info2{
+    border-radius: 100px;
+    background-color: rgb(164, 78, 78);
+    color: white;
+}

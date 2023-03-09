@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevent Default and Stop Propogation</title>
+    <script async src="script.js" type="text/javascript"></script>
+    <style>
+        body{
+            margin: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>preventDefault() and stopPropogation()</h1>
+    <h2>preventDefault() :</h2>
+    <p>It is a method present in the event interface.
+        This method prevents the browser from executing
+        the default behavior of the selected element.
+        This method can cancel the event only if the 
+        event is cancelable. 
+    </p>
+    <p>This event of clicking a link is prevented from 
+        executing by using preventDefault().
+    </p>
+    <a href="https://www.google.co.in/imghp?hl=en&tab=ri&ogbl" id="link1">Search Images</a>
+
+    <h2>stopPropogation</h2>
+    <p>This method is used to prevent the parent element from accessing the event. Basically, this method is used to prevent the propagation of the same event from being called. For eg,  we have a button element inside a div tag and there is an onclick event on both of them, then whenever we try to activate the event attached to the button element, then the event attached to the div element also gets executed because div is the parent of the button element.</p>
+
+    <div class="first" onclick="firstFunction()">
+        <button type="button" onclick="secondFunction()">
+        Button</button>
+    </div>
+
+    <p>Here, after clicking on the button, both functions will be executed.</p>
+
+
+    <div class="first" onclick="functionFirst()">
+        <button type="button" onclick="functionSecond()">
+        Button</button>
+    </div>
+
+    <p>Here, after clicking on the button, only
+        child function will be executed.
+    </p>
+</body>
+
+</html>
