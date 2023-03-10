@@ -1,16 +1,24 @@
 let source = document.getElementById("selectSource");
 let destination = document.getElementById("selectDestination");
 
-let route = new Map();
-route.set("Delhi", ["Delhi"]);
-route.set("Mumbai", ["Mumbai"]);
-route.set("Lucknow", ["Lucknow"]);
-route.set("Punjab", ["Punjab"]);
-route.set("Uttarakhand", ["Uttarakhand"])
+let sourceToDestination = new Map();
+sourceToDestination.set("Delhi", ["Delhi"]);
+sourceToDestination.set("Mumbai", ["Mumbai"]);
+sourceToDestination.set("Lucknow", ["Lucknow"]);
+sourceToDestination.set("Punjab", ["Punjab"]);
+sourceToDestination.set("Uttarakhand", ["Uttarakhand"]);
+
+let destinationToSource = new Map();
+destinationToSource.set("Delhi", ["Delhi"]);
+destinationToSource.set("Mumbai", ["Mumbai"]);
+destinationToSource.set("Lucknow", ["Lucknow"]);
+destinationToSource.set("Punjab", ["Punjab"]);
+destinationToSource.set("Uttarakhand", ["Uttarakhand"]);
+
 
 function sourceSelection() {
     let destOptions = destination.options;
-    let blockedDest = route.get(source.value);
+    let blockedDest = sourceToDestination.get(source.value);
     //console.log(blockedDest[0]);
 
     for(let i=0; i<destOptions.length; i++) {
@@ -27,17 +35,48 @@ function sourceSelection() {
     
 }
 
+function destinationSelection() {
+    let sourceOptions = source.options;
+    let blockedSource = destinationToSource.get(destination.value);
 
+    for(let i=0; i<sourceOptions.length; i++) {
+        sourceOptions[i].disabled = false;
+    }
 
-function main() {
+    for(let i=1; i<sourceOptions.length; i++) {
+        for(let j=0; j<blockedSource.length; j++) {
+            if(sourceOptions[i].value == blockedSource[j]) {
+                sourceOptions[i].disabled = true;
+            }
+        }
+    }
+}
+
+function addRoutes() {
     
-    let newBlockedDest = route.get(source.value);
+    let newBlockedDest = sourceToDestination.get(source.value);
     newBlockedDest.push(destination.value);
-    route.set(source.value, newBlockedDest);
+    sourceToDestination.set(source.value, newBlockedDest);
+
+    let newBlockedSource = destinationToSource.get(destination.value);
+    newBlockedSource.push(source.value);
+    destinationToSource.set(source.value, newBlockedSource);
+
+    //reseting dropdowns
+    let sourceOptions = source.options;
+    for(let i=0; i<sourceOptions.length; i++) {
+        sourceOptions[i].disabled = false;
+    }
+
+    let destOptions = destination.options;
+    for(let i=0; i<destOptions.length; i++) {
+        destOptions[i].disabled = false;
+    }
+
+
 
     let showRoutes = document.getElementById("routes");
-    showRoutes.innerHTML += source.value + " to " + destination.value + "<br>";
-
+    showRoutes.innerHTML += "from : " + source.value + " to : " + destination.value + "<br>";
     source.selectedIndex = 0;
     destination.selectedIndex = 0;
 }

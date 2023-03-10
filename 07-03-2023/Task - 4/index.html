@@ -19,7 +19,7 @@
             <option value="Punjab">Punjab</option>
             <option value="Uttarakhand">Uttarakhand</option>
         </select> 
-        <select class="destination" id="selectDestination">
+        <select class="destination" id="selectDestination" onchange="destinationSelection()">
             <option selected disabled>Select Destination</option>
             <option value="Delhi">Delhi</option>
             <option value="Mumbai">Mumbai</option>
@@ -28,7 +28,7 @@
             <option value="Uttarakhand">Uttarakhand</option>
         </select>
     </div>
-    <button type="button" onclick="main()">Submit</button>
+    <button type="button" onclick="addRoutes()">Submit</button>
     <h3>All Routes - </h3>
     <p id="routes"></p>
 </body>
