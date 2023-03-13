@@ -50,3 +50,37 @@ class SUV extends Car{
 
 let car = new SUV("Black", "Suzuki", 90, "Off Roader");
 car.getInfo();
+
+//Interface inheritance
+
+interface person {
+    name : string;
+    age : number;
+}
+
+//interface inheriting interface
+interface musician extends person {
+    instrument : string;
+}
+
+interface techSkills {
+    skill : string;
+}
+
+//class performing multiple and multilevel interface
+//inheritance.
+class Guitarist implements musician, techSkills{ 
+    instrument: string;
+    name: string;
+    age: number;
+    skill : string;
+    constructor(name, age, instrument, skill) {
+        this.name = name;
+        this.age = age;
+        this.instrument = instrument;
+        this.skill = skill;
+    }
+}
+
+let person = new Guitarist("John", 23, "Base Guitar", "Sound Engineer");
+console.log(person.name + " is " + person.age + " old, He plays " + person.instrument + " and he is also a " + person.skill);
