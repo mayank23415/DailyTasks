@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        #myChart1, #myChart2, #myChart3{
+            max-width: 300px;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <canvas id="myChart1"></canvas>
+        <canvas id="myChart2"></canvas>
+        <canvas id="myChart3"></canvas>
+    </div>
+    
+
+    <script>
+        var dataLabel = ["Uttarakhand", "Uttarpradesh", "Punjab", "Delhi", "Karnataka"];
+        var dataValue = [2361.92, 7863, 2136, 80, 6294.29];
+        var area = [52483, 240928, 50362, 1484, 1917932]
+        var airport = [ 1, 2, 2, 1, 6]
+        new Chart("myChart1", {
+            type: 'pie',
+            data: {
+                labels: dataLabel,
+                datasets: [{
+                    data: dataValue,
+                    backgroundColor: [
+                        "#b91d47",
+                        "#00aba9",
+                        "#2b5797",
+                        "#e8c3b9",
+                        "#1e7145"
+                    ],
+                }]
+            }, 
+            options : {
+                title : {
+                    display : true,
+                    text : "States Road Length"
+                }
+            }
+        });
+
+        new Chart("myChart2", {
+            type: 'polarArea',
+            data: {
+                labels: dataLabel,
+                datasets: [{
+                    data: area,
+                    backgroundColor: [
+                        "#b91d47",
+                        "#00aba9",
+                        "#2b5797",
+                        "#e8c3b9",
+                        "#1e7145"
+                    ],
+                }]
+            }, 
+            options : {
+                title : {
+                    display : true,
+                    text : "States Area"
+                }
+            }
+        })
+        new Chart("myChart3", {
+            type: 'doughnut',
+            data: {
+                labels: dataLabel,
+                datasets: [{
+                    data: airport,
+                    backgroundColor: [
+                        "#b91d47",
+                        "#00aba9",
+                        "#2b5797",
+                        "#e8c3b9",
+                        "#1e7145"
+                    ],
+                }]
+            }, 
+            options : {
+                title : {
+                    display : true,
+                    text : "States Airport Count "
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        *{
+            margin : 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+<canvas id="myChart1" style="width:100%"></canvas>
+<canvas id="myChart2" style="width:100%"></canvas>
+
+<script>
+var xValues = ["2011", "2012", "2013", "2014", "2015"];
+var yValues = [55, 52, 48, 43, 55];
+
+
+new Chart("myChart1", {
+  type: "horizontalBar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: 'blue',
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Mango Production "
+    },
+    xAxis : { title : "In Tons"},
+    yAxis : { title : "Year"}
+  }
+});
+
+new Chart("myChart2", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: 'blue',
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "Mango Production "
+    },
+    xAxis : { title : "In Tons"},
+    yAxis : { title : "Year"}
+  }
+});
+</script>
+
+</body>
+</html>
