@@ -5,7 +5,7 @@
 abstract class Employee {
     name: string;
     rate: number;
-    constructor(name:string, rate:number) {
+    constructor(name: string, rate: number) {
         this.name = name;
         this.rate = rate;
     }
@@ -17,7 +17,7 @@ abstract class Employee {
 
 class FullTimeEmployee extends Employee {
     workingHours: number;
-    constructor(name:string, rate:number, workingHours:number) {
+    constructor(name: string, rate: number, workingHours: number) {
         super(name, rate);
         this.workingHours = workingHours;
     }
@@ -28,7 +28,7 @@ class FullTimeEmployee extends Employee {
 }
 
 class Freelancer extends Employee {
-    workingHours : number;
+    workingHours: number;
     constructor(name, rate, workingHours) {
         super(name, rate);
         this.workingHours = workingHours;
@@ -36,7 +36,7 @@ class Freelancer extends Employee {
 
     //Child class implementing abstract method.
     public salary(): number {
-        return this.workingHours * this.rate; 
+        return this.workingHours * this.rate;
     }
 }
 

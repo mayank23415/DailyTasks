@@ -3,47 +3,47 @@
 //It allows - Single and Multilevel inheritance.
 
 class Vehicle {
-    color : string;
-    name : string;
+    color: string;
+    name: string;
     constructor(color, name) {
         this.color = color;
         this.name = name;
     }
 
-    getName() : string {
+    getName(): string {
         return this.name;
     }
 
-    getColor() : string {
+    getColor(): string {
         return this.color;
     }
 }
 
 //Single level Inheritance - 
 class Car extends Vehicle {
-    maxSpeed : number;
+    maxSpeed: number;
     constructor(color, name, maxSpeed) {
         //Super keyword is used to call parent constructor and methods.
         super(color, name);
         this.maxSpeed = maxSpeed;
     }
 
-    getSpeed() : number {
+    getSpeed(): number {
         return this.maxSpeed;
     }
 }
 
 //Mutlilevel Inheritence -
-class SUV extends Car{
-    carType : string;
+class SUV extends Car {
+    carType: string;
     constructor(color, name, maxSpeed, carType) {
         super(color, name, maxSpeed);
         this.carType = carType;
     }
 
     //Using super to access parent members 
-    getInfo() : void {
-        console.log(super.getName() + " - Color: " + super.getColor() + " MaxSpeed: " + super.getSpeed()  + " Type: " + this.carType);
+    getInfo(): void {
+        console.log(super.getName() + " - Color: " + super.getColor() + " MaxSpeed: " + super.getSpeed() + " Type: " + this.carType);
     }
 }
 
@@ -54,26 +54,26 @@ car.getInfo();
 //Interface inheritance
 
 interface person {
-    name : string;
-    age : number;
+    name: string;
+    age: number;
 }
 
 //interface inheriting interface
 interface musician extends person {
-    instrument : string;
+    instrument: string;
 }
 
 interface techSkills {
-    skill : string;
+    skill: string;
 }
 
 //class performing multiple and multilevel interface
 //inheritance.
-class Guitarist implements musician, techSkills{ 
+class Guitarist implements musician, techSkills {
     instrument: string;
     name: string;
     age: number;
-    skill : string;
+    skill: string;
     constructor(name, age, instrument, skill) {
         this.name = name;
         this.age = age;
