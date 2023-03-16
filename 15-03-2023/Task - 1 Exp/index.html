@@ -1,15 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js"></script>
+    <script src="restaurantBooking.js"></script>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <input type="time" id="start">
-    <input type="time" id="end">
-    <button type="button" onclick="main()">Click Here</button>
+    <input type="date" id="date">
+    <input type="time" id="start" onchange="getStartTime()">
+    <input type="time" id="end" onchange="getEndTime()">
+    <select id="tableType">
+        <option disabled selected>Select Table Type</option>
+        <option value="dubTable">Two Person</option>
+        <option value="quadTable">Four Person</option>
+        <option value="octaTable">Eight Person</option>
+    </select>
+    <button type="button" onclick="bookTable()">Click Here</button>
+
+    <button type="button" onclick="Delete()" id="delete">Delete</button>
+    <button type="button" onclick="fetchData()" id="delete">Load List</button>
+    <br>
+    <strong id="fetchedData" ></strong>
+    
 </body>
+
 </html>

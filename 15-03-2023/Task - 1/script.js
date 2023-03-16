@@ -15,8 +15,9 @@ function bookTable() {
         end: end,
         name: tablePackage(tableSize)
     }
-
-    if (startEndValidation(seat.start, seat.end)) {
+    console.log(timeValidation(seat.start, seat.end));
+    if (timeValidation(seat.start, seat.end)) {
+        console.log("Time is valid");
         let bookedTable = tables.get(tableSize);
         flag = true;
         if (bookedTable.length == 0) {
@@ -114,7 +115,7 @@ function displayReservations() {
     }
 }
 
-function startEndValidation(start, end) {
+function timeValidation(start, end) {
     if (start > end || start == end)
         return false;
     else
