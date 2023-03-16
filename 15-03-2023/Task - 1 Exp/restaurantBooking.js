@@ -102,6 +102,31 @@ function timeValidation(startTime, endTime) {
     }
 }
 
+
+function getStartTime() {
+    let start =  document.getElementById("start").value;
+    
+    let s = start.split(':');
+    console.log(s[0] + "$" + s[1])
+    return s[0] + "$" + s[1];
+}
+
+function getEndTime() {
+    let end = document.getElementById("end").value;
+    let s = end.split(':');
+    console.log(s[0] + "$" + s[1])
+    return s[0] + "$" + s[1];
+}
+
+function displayData(parseData) {
+    let para = document.getElementById("fetchedData");
+    for (let i = 0; i < parseData.length; i++) {
+        if (para != null) {
+            para.innerHTML += typeName(parseData[i].type) + " is booked on " + parseData[i].date + " from :" + parseData[i].start + " to " + parseData[i].end + "<br>";
+        }
+    }
+}
+
 //data storage 
 function storeData(appointments) {
     console.log("store data called");
@@ -122,26 +147,3 @@ function fetchData() {
 
 
 
-function displayData(parseData) {
-    let para = document.getElementById("fetchedData");
-    for (let i = 0; i < parseData.length; i++) {
-        if (para != null) {
-            para.innerHTML += typeName(parseData[i].type) + " is booked on " + parseData[i].date + " from :" + parseData[i].start + " to " + parseData[i].end + "<br>";
-        }
-    }
-}
-
-function getStartTime() {
-    let start =  document.getElementById("start").value;
-    
-    let s = start.split(':');
-    console.log(s[0] + "$" + s[1])
-    return s[0] + "$" + s[1];
-}
-
-function getEndTime() {
-    let end = document.getElementById("end").value;
-    let s = end.split(':');
-    console.log(s[0] + "$" + s[1])
-    return s[0] + "$" + s[1];
-}
