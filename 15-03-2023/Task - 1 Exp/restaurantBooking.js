@@ -132,9 +132,9 @@ function displayData(parseData) {
 
 function setDate() {
     let date = document.getElementById("date");
-    let d = new Date();
-    let str = d.toISOString();
-    date.setAttribute("min", str.substr(0,10));
+    let currentDate = new Date();
+    let dateString = currentDate.toISOString();
+    date.setAttribute("min", dateString.substr(0,10));
 }
 
 //data storage 
