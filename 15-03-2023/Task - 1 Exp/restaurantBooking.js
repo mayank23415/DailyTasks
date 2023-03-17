@@ -4,6 +4,7 @@ if (fetchData() != null) {
 }
 console.log(appointments);
 
+//table booking
 function bookTable() {
     let table = {
         date: "",
@@ -122,9 +123,18 @@ function displayData(parseData) {
     let para = document.getElementById("fetchedData");
     for (let i = 0; i < parseData.length; i++) {
         if (para != null) {
-            para.innerHTML += typeName(parseData[i].type) + " is booked on " + parseData[i].date + " from :" + parseData[i].start + " to " + parseData[i].end + "<br>";
+            const startTime = parseData[i].start.split("$");
+            const endTime = parseData[i].end.split("$");
+            para.innerHTML += typeName(parseData[i].type) + " is booked on " + parseData[i].date + " from :" + startTime[0] + ":" + startTime[1]  + " to " + endTime[0] + ":" + endTime[1] + "<br>";
         }
     }
+}
+
+function setDate() {
+    let date = document.getElementById("date");
+    let d = new Date();
+    let str = d.toISOString();
+    date.setAttribute("min", str.substr(0,10));
 }
 
 //data storage 
