@@ -1,5 +1,5 @@
 let appointments = [];
-if (fetchData() != null) {
+if(fetchData() != null) {
     appointments = fetchData();
 }
 console.log(appointments);
@@ -19,6 +19,9 @@ function bookTable() {
     if (tableType(table, date)) {
         alert("Table Booked Successfully");
         storeData(appointments);
+        //console.log(table);
+        //setData(table);
+        getData();
     } else {
         alert("Change table type or time");
     }
@@ -34,9 +37,9 @@ function checkAvailability(table, date, type) {
     let start = getStartTime();
     let end = getEndTime();
     if (timeValidation(start, end)) {
+        table.start = start;
+        table.end = end;
         if (appointments.length == 0) {
-            table.start = start;
-            table.end = end;
             appointments.push(table);
             return true;
         } else {
@@ -58,28 +61,21 @@ function checkAvailability(table, date, type) {
 }
 
 
-//Delete 
-function Delete() {
+//---------------------------------------------------------------- Delete Schedule from Database
+async function Delete() {
     let date = document.getElementById("date").value;
     let start = getStartTime();
     let end = getEndTime();
     let tableType = document.getElementById("tableType").value;
-    let index = -1;
-    if (timeValidation(start, end)) {
-        
-        index = appointments.findIndex((table) => table.start == start && table.end == end && table.date == date && table.type == tableType);
-        
-    } else {
-        alert("Enter valid data to remove table appointment")
-    }
+    let str = date + ":" + start + ":" + end + ":" + tableType;
 
-    if (index != -1) {
-        appointments.splice(index, 1);
-        storeData(appointments);
-        alert("Element Deleted");
-    } else {
-        alert("Invalid Data");
-    }
+    const url = `http://localhost:3000/deleteTable/`;
+    const a = await ((fetch(url + JSON.stringify(str), {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })));
 }
 
 //utility 
@@ -105,27 +101,28 @@ function timeValidation(startTime, endTime) {
 
 
 function getStartTime() {
-    let start =  document.getElementById("start").value;
-    
+    let start = document.getElementById("start").value;
     let s = start.split(':');
-    console.log(s[0] + "$" + s[1])
+    //console.log(s[0] + "$" + s[1])
     return s[0] + "$" + s[1];
 }
 
 function getEndTime() {
     let end = document.getElementById("end").value;
     let s = end.split(':');
-    console.log(s[0] + "$" + s[1])
+    //console.log(s[0] + "$" + s[1])
     return s[0] + "$" + s[1];
 }
 
 function displayData(parseData) {
     let para = document.getElementById("fetchedData");
-    for (let i = 0; i < parseData.length; i++) {
-        if (para != null) {
-            const startTime = parseData[i].start.split("$");
-            const endTime = parseData[i].end.split("$");
-            para.innerHTML += typeName(parseData[i].type) + " is booked on " + parseData[i].date + " from :" + startTime[0] + ":" + startTime[1]  + " to " + endTime[0] + ":" + endTime[1] + "<br>";
+    if (parseData != null) {
+        for (let i = 0; i < parseData.length; i++) {
+            if (para != null) {
+                const startTime = parseData[i].start.split("$");
+                const endTime = parseData[i].end.split("$");
+                para.innerHTML += typeName(parseData[i].type) + " is booked on " + parseData[i].date + " from :" + startTime[0] + ":" + startTime[1] + " to " + endTime[0] + ":" + endTime[1] + "<br>";
+            }
         }
     }
 }
@@ -134,7 +131,7 @@ function setDate() {
     let date = document.getElementById("date");
     let currentDate = new Date();
     let dateString = currentDate.toISOString();
-    date.setAttribute("min", dateString.substr(0,10));
+    date.setAttribute("min", dateString.substr(0, 10));
 }
 
 //data storage 
@@ -145,15 +142,37 @@ function storeData(appointments) {
     console.log(serializedData);
 }
 
+
+
 function fetchData() {
     console.log("fetch data called");
     let parseData = JSON.parse(localStorage.getItem("schedule"));
-    if(parseData != null) {
+    if (parseData != null) {
         displayData(parseData);
     }
-    
+    const data = getData();
+    console.log(data.value);
     return parseData;
 }
 
 
+// -------------------------------------------------------------- Storing Data on Database
+async function setData(table) {
+    const url = `http://localhost:3000/setData/`;
+    const a = await (await (fetch(url + JSON.stringify(table), {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })));
+    console.log(a);
+}
 
+// -------------------------------------------------------------- Getting Data from Database
+async function getData() {
+    const url = `http://localhost:3000/`;
+    const a = await (await fetch(url, {
+        method: 'GET'
+    }));
+    return a;
+}

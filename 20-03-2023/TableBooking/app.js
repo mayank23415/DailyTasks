@@ -1,8 +1,10 @@
 const express = require('express');
 const { FindCursor } = require('mongodb');
 const app = express();
+const bodyparser = require('body-parser');
 
-app.set("view engine", "ejs");
+app.use(express.json());
+//app.set("view engine", "ejs");
 //var bookTable = require('./routes/bookTable');
 //var deleteTable = require('./routes/deleteTable');
 const tableBooking = require('./routes/tableBooking');
@@ -11,7 +13,6 @@ app.use(express.static('public'));
 
 
 
-app.use('/', tableBooking);
 app.use('/', tableBooking);
 
 app.listen(3000, console.log("Success"));

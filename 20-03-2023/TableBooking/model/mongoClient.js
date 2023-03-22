@@ -1,12 +1,11 @@
 const {MongoClient} = require('mongodb');
 const uri = "mongodb://127.0.0.1:27017";
 const client = new MongoClient(uri);
-let db;
 
 async function connection() {
     try{
         await client.connect();
-        db = client.db('Restaurant').collection('schedule');
+        await client.db('Restaurant').collection('schedules');
         console.log("Successfully connected");
     }catch (e) {
         await console.log(e);
@@ -14,4 +13,4 @@ async function connection() {
 }
 
 connection();
-module.exports = db;
+module.exports = client;
