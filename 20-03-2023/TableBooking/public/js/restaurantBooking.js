@@ -1,6 +1,7 @@
+
 let appointments = [];
-if(fetchData() != null) {
-    appointments = fetchData();
+if(getData() != null) {
+    appointments = Object.entries(getData());
 }
 console.log(appointments);
 
@@ -18,10 +19,10 @@ function bookTable() {
     table.date = date;
     if (tableType(table, date)) {
         alert("Table Booked Successfully");
-        storeData(appointments);
+        //storeData(appointments);
         //console.log(table);
-        //setData(table);
-        getData();
+        setData(table);
+        //getData();
     } else {
         alert("Change table type or time");
     }
@@ -135,25 +136,24 @@ function setDate() {
 }
 
 //data storage 
-function storeData(appointments) {
-    console.log("store data called");
-    let serializedData = JSON.stringify(appointments);
-    localStorage.setItem("schedule", serializedData);
-    console.log(serializedData);
-}
+// function storeData(appointments) {
+//     console.log("store data called");
+//     let serializedData = JSON.stringify(appointments);
+//     localStorage.setItem("schedule", serializedData);
+//     console.log(serializedData);
+// }
 
 
 
-function fetchData() {
-    console.log("fetch data called");
-    let parseData = JSON.parse(localStorage.getItem("schedule"));
-    if (parseData != null) {
-        displayData(parseData);
-    }
-    const data = getData();
-    console.log(data.value);
-    return parseData;
-}
+// function fetchData() {
+//     console.log("fetch data called");
+//     let parseData = JSON.parse(localStorage.getItem("schedule"));
+//     if (parseData != null) {
+//         displayData(parseData);
+//     }
+//     getData();
+//     return parseData;
+// }
 
 
 // -------------------------------------------------------------- Storing Data on Database
@@ -170,9 +170,18 @@ async function setData(table) {
 
 // -------------------------------------------------------------- Getting Data from Database
 async function getData() {
-    const url = `http://localhost:3000/`;
-    const a = await (await fetch(url, {
-        method: 'GET'
-    }));
-    return a;
+    const url = `http://localhost:3000/getData`;
+    const data = await (fetch(url)
+    .then(
+        res => res.json()
+    )
+    .then(data => data)
+    );
+    console.log(data);
+    return data;
+}
+
+async function loadData() {
+    const data = await getData();
+    displayData(data);
 }

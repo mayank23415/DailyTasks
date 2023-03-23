@@ -28,8 +28,8 @@ async function deleteTable(req, res){
 }
 
 async function getTable(req, res) {
-    const data = await client.db('Restaurant').collection('schedules').find().toArray();
-    res.json(data);
+    const data = await client.db('Restaurant').collection('schedules').find({}).toArray();
+    res.send(data);
 }
 
 const dashboard = (req, res) => {
