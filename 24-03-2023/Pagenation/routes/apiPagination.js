@@ -7,5 +7,4 @@ router.get('/', (req, res) =>{
 });
 
 router.get('/getData', api.getData);
-router.get('/createData', api.createData)
 module.exports = router

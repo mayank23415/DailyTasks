@@ -13,14 +13,5 @@ async function getData(req, res) {
     res.json(data);
 }
 
-async function createData(req, res) {
-    for (let i = 0; i < 50; i++) {
-        const str = "data";
-        await client.db('Pagination').collection('data').insertOne({
-            name: str + i
-        })
-    }
-    res.send("DONE");
-}
 
-module.exports = { getData, createData }
+module.exports = { getData }
