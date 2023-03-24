@@ -1,10 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const client = require('../model/connection');
-const user = require('../model/schema');
-const bcrypt = require('bcrypt');
+const auth = require('../controller/auth')
 
-router.post('/signUp', (req, res) => {
-    const {username, password} = req.body;
-     
+
+
+router.get('/', (req, res) => {
+    res.send("This is root");
 })
+router.post('/signUp', auth.signUp);
+router.post('/login', auth.login);
+router.get('/loggedIn', auth.authorization, auth.loggedIn);
+
+
+module.exports = router;
